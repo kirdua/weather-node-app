@@ -12,9 +12,13 @@ const forecast = (lat, long, callback) => {
         } else {
             const weatherDescription = body.current.weather_descriptions[0];
             const temp = body.current.temperature;
+            const humidity = body.current.humidity;
             const windChill = body.current.feelslike;
+            const windSpeed = body.current.wind_speed;
+            const windDirection = body.current.wind_dir;
             
-            const data = `${weatherDescription} with a current temp of ${temp}. Feels like ${windChill}.`
+            const data = `${weatherDescription} with a current temp of ${temp}. Feels like ${windChill} width a humidity of ${humidity}%. 
+            Wind is currently coming from the ${windDirection} at ${windSpeed}mph.`
            
             callback(undefined, data)
         }
