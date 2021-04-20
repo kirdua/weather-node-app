@@ -17,7 +17,7 @@ const forecast = (lat, long, callback) => {
             const windSpeed = body.current.wind_speed;
             const windDirection = body.current.wind_dir;
             
-            const data = `${weatherDescription} with a current temp of ${temp}. Feels like ${windChill} width a humidity of ${humidity}%. 
+            const data = `${weatherDescription} with a current temp of ${temp}°. Feels like ${windChill}° width a humidity of ${humidity}%. 
             Wind is currently coming from the ${windDirection} at ${windSpeed}mph.`
            
             callback(undefined, data)
